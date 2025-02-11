@@ -20,7 +20,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 	@Value("${bot.token}")
 	private String botToken;
 
-	private final UpdateController updateController;
+	private UpdateController updateController;
 
 	public TelegramBot(UpdateController updateController) {
 		this.updateController = updateController;
@@ -30,7 +30,6 @@ public class TelegramBot extends TelegramLongPollingBot {
 	public void init() {
 		updateController.registerBot(this);
 	}
-
 
 	@Override
 	public String getBotUsername() {
