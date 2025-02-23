@@ -1,6 +1,5 @@
 package my.project.controllers;
 
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import my.project.services.UpdateProducer;
 import my.project.utils.MessageUtils;
@@ -8,13 +7,12 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+import static my.project.model.RabbitQueue.*;
+
 @Slf4j
 @Component
 public class UpdateController {
 
-	public static final String DOC_MESSAGE_UPDATE = "doc_message_update";
-	public static final String PHOTO_MESSAGE_UPDATE = "photo_message_update";
-	public static final String TEXT_MESSAGE_UPDATE = "text_message_update";
 
 	private TelegramBot telegramBot;
 
@@ -69,7 +67,7 @@ public class UpdateController {
 		setView(sendMessage);
 	}
 
-	private void setView(SendMessage sendMessage) {
+	public void setView(SendMessage sendMessage) {
 		telegramBot.sendAnswerMessage(sendMessage);
 	}
 
