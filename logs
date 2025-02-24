@@ -1,11 +1,11 @@
-2025-02-23 23:18:58.800  INFO 17972 --- [main] my.project.DispatcherApplication         : Starting DispatcherApplication using Java 11.0.26 on compucter with PID 17972 (C:\Users\islam\IdeaProjects\TGBOT\dispatcher\target\classes started by islam in C:\Users\islam\IdeaProjects\TGBOT)
-2025-02-23 23:18:58.804  INFO 17972 --- [main] my.project.DispatcherApplication         : No active profile set, falling back to default profiles: default
-2025-02-23 23:19:00.378  INFO 17972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1405 (http)
-2025-02-23 23:19:00.398  INFO 17972 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-23 23:19:00.398  INFO 17972 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
-2025-02-23 23:19:00.519  INFO 17972 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-23 23:19:00.520  INFO 17972 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1645 ms
-2025-02-23 23:19:02.146  INFO 17972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1405 (http) with context path ''
-2025-02-23 23:19:02.160  INFO 17972 --- [main] my.project.DispatcherApplication         : Started DispatcherApplication in 4.01 seconds (JVM running for 9.875)
-2025-02-23 23:21:39.650  INFO 17972 --- [TheSpringFirstBot Telegram Executor] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2025-02-23 23:21:39.794  INFO 17972 --- [TheSpringFirstBot Telegram Executor] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7132a9dc:0/SimpleConnection@3a66b0a7 [delegate=amqp://userok@127.0.0.1:5672/, localPort= 53826]
+2025-02-24 22:34:26.755  INFO 22944 --- [main] my.project.DispatcherApplication         : Starting DispatcherApplication using Java 11.0.26 on compucter with PID 22944 (C:\Users\islam\IdeaProjects\TGBOT\dispatcher\target\classes started by islam in C:\Users\islam\IdeaProjects\TGBOT)
+2025-02-24 22:34:26.772  INFO 22944 --- [main] my.project.DispatcherApplication         : No active profile set, falling back to default profiles: default
+2025-02-24 22:34:28.752  INFO 22944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1405 (http)
+2025-02-24 22:34:28.771  INFO 22944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-24 22:34:28.772  INFO 22944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2025-02-24 22:34:28.923  INFO 22944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-24 22:34:28.923  INFO 22944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2038 ms
+2025-02-24 22:34:30.864  INFO 22944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1405 (http) with context path ''
+2025-02-24 22:34:30.880  INFO 22944 --- [main] my.project.DispatcherApplication         : Started DispatcherApplication in 5.175 seconds (JVM running for 6.083)
+2025-02-24 22:35:07.778  INFO 22944 --- [TheSpringFirstBot Telegram Executor] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-02-24 22:35:07.865  INFO 22944 --- [TheSpringFirstBot Telegram Executor] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#9b9a327:0/SimpleConnection@183737f9 [delegate=amqp://userok@127.0.0.1:5672/, localPort= 57360]
