@@ -153,3 +153,65 @@
 2025-02-27 12:05:04.137  INFO 33052 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-02-27 12:05:04.140  INFO 33052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-02-27 12:05:04.151  INFO 33052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-27 15:49:49.111  INFO 40724 --- [main] my.project.NodeApplication               : Starting NodeApplication using Java 11.0.26 on compucter with PID 40724 (C:\Users\islam\IdeaProjects\TGBOT\node\target\classes started by islam in C:\Users\islam\IdeaProjects\TGBOT)
+2025-02-27 15:49:49.118  INFO 40724 --- [main] my.project.NodeApplication               : No active profile set, falling back to default profiles: default
+2025-02-27 15:49:50.731  INFO 40724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-27 15:49:50.967  INFO 40724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 5 JPA repository interfaces.
+2025-02-27 15:49:52.322  INFO 40724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1307 (http)
+2025-02-27 15:49:52.342  INFO 40724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-27 15:49:52.344  INFO 40724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2025-02-27 15:49:52.682  INFO 40724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-27 15:49:52.683  INFO 40724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3474 ms
+2025-02-27 15:49:53.049  INFO 40724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-27 15:49:53.573  INFO 40724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-27 15:49:53.753  INFO 40724 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-27 15:49:53.952  INFO 40724 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2025-02-27 15:49:54.476  INFO 40724 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-02-27 15:49:54.851  INFO 40724 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-02-27 15:49:57.054  INFO 40724 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-02-27 15:49:57.081  INFO 40724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-27 15:49:58.614  WARN 40724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-27 15:49:59.642  INFO 40724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1307 (http) with context path ''
+2025-02-27 15:49:59.647  INFO 40724 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-02-27 15:49:59.743  INFO 40724 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#18e76101:0/SimpleConnection@236206f8 [delegate=amqp://userok@127.0.0.1:5672/, localPort= 63569]
+2025-02-27 15:49:59.889  INFO 40724 --- [main] my.project.NodeApplication               : Started NodeApplication in 11.878 seconds (JVM running for 14.29)
+2025-02-27 15:52:36.338  INFO 40724 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-02-27 15:52:37.225  INFO 40724 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-02-27 15:52:37.231  INFO 40724 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-02-27 15:52:37.238  INFO 40724 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-02-27 15:52:37.244  INFO 40724 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-02-27 15:52:37.331  INFO 40724 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-02-27 15:52:37.773  INFO 40724 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-27 15:52:37.799  INFO 40724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-27 15:52:37.826  INFO 40724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-27 15:54:39.760  INFO 36344 --- [main] my.project.NodeApplication               : Starting NodeApplication using Java 11.0.26 on compucter with PID 36344 (C:\Users\islam\IdeaProjects\TGBOT\node\target\classes started by islam in C:\Users\islam\IdeaProjects\TGBOT)
+2025-02-27 15:54:39.768  INFO 36344 --- [main] my.project.NodeApplication               : No active profile set, falling back to default profiles: default
+2025-02-27 15:54:41.219  INFO 36344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-27 15:54:41.394  INFO 36344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157 ms. Found 5 JPA repository interfaces.
+2025-02-27 15:54:42.440  INFO 36344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1307 (http)
+2025-02-27 15:54:42.458  INFO 36344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-27 15:54:42.459  INFO 36344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2025-02-27 15:54:42.674  INFO 36344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-27 15:54:42.675  INFO 36344 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2803 ms
+2025-02-27 15:54:42.997  INFO 36344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-27 15:54:43.369  INFO 36344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-27 15:54:43.487  INFO 36344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-27 15:54:43.681  INFO 36344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2025-02-27 15:54:44.079  INFO 36344 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-02-27 15:54:44.426  INFO 36344 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-02-27 15:54:46.331  INFO 36344 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-02-27 15:54:46.360  INFO 36344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-27 15:54:47.650  WARN 36344 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-27 15:54:48.527  INFO 36344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1307 (http) with context path ''
+2025-02-27 15:54:48.532  INFO 36344 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-02-27 15:54:48.614  INFO 36344 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5cf80dfb:0/SimpleConnection@3a7d6976 [delegate=amqp://userok@127.0.0.1:5672/, localPort= 63837]
+2025-02-27 15:54:48.840  INFO 36344 --- [main] my.project.NodeApplication               : Started NodeApplication in 9.979 seconds (JVM running for 11.682)
+2025-02-27 15:57:57.888  INFO 36344 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-02-27 15:57:58.417  INFO 36344 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-02-27 15:57:58.429  INFO 36344 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-02-27 15:57:58.519  INFO 36344 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-02-27 15:57:58.524  INFO 36344 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-02-27 15:57:58.569  INFO 36344 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-02-27 15:57:58.890  INFO 36344 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-27 15:57:58.899  INFO 36344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-27 15:57:58.921  INFO 36344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -12,11 +12,13 @@ import my.project.exceptions.UploadFileException;
 import my.project.service.FileService;
 import my.project.service.MainService;
 import my.project.service.ProducerService;
+import my.project.service.enums.LinkType;
 import my.project.service.enums.ServiceCommands;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
+
 
 import static my.project.entity.enums.UserState.*;
 import static my.project.service.enums.ServiceCommands.*;
@@ -75,9 +77,9 @@ public class MainServiceImpl implements MainService {
 
 		try {
 			AppDocument doc = fileService.processDoc(update.getMessage());
-			//TODO Добавить генерацию ссылки для скачивания документа
+			String link = fileService.generateLink(doc.getId(), LinkType.GET_DOC);
 			var answer = "Документ успешно загружен! "
-					+ "Ссылка для скачивания: https://test.ru/get-doc/777";
+					+ "Ссылка для скачивания: " + link;
 			sendAnswer(answer, chatId);
 		} catch (UploadFileException ex) {
 			log.error(String.valueOf(ex));
@@ -97,9 +99,9 @@ public class MainServiceImpl implements MainService {
 
 		try {
 			AppPhoto photo = fileService.processPhoto(update.getMessage());
-			//TODO добавить генерацию ссылки для скачивания фото
+			String link = fileService.generateLink(photo.getId(), LinkType.GET_PHOTO);
 			var answer = "Фото успешно загружено! "
-					+ "Ссылка для скачивания: https://test.ru/get-photo/777";
+					+ "Ссылка для скачивания: " + link;
 			sendAnswer(answer, chatId);
 		} catch (UploadFileException ex) {
 			log.error(String.valueOf(ex));
