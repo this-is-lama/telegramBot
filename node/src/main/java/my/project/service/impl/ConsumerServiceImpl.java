@@ -1,4 +1,4 @@
-package my.project.impl;
+package my.project.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import my.project.service.ConsumerService;

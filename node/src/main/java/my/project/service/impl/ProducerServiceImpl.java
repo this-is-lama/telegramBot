@@ -1,4 +1,4 @@
-package my.project.impl;
+package my.project.service.impl;
 
 import my.project.service.ProducerService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
