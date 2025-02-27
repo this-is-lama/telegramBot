@@ -4,9 +4,10 @@ package my.project.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import my.project.dao.AppUserDAO;
 import my.project.dao.RawDataDAO;
+import my.project.entity.AppPhoto;
 import my.project.entity.AppUser;
 import my.project.entity.RawData;
-import my.project.entity.enums.AppDocument;
+import my.project.entity.AppDocument;
 import my.project.exceptions.UploadFileException;
 import my.project.service.FileService;
 import my.project.service.MainService;
@@ -53,7 +54,7 @@ public class MainServiceImpl implements MainService {
 		} else if (BASIC_STATE.equals(userState)) {
 			output = processServiceCommand(appUser, text);
 		} else if (WAIT_FOR_EMAIL_STATE.equals(userState)) {
-			//TODO добавить обработку
+			//TODO добавить обработку емейла
 		} else {
 			log.error("Unknown user state: {}", userState);
 			output = "Неизвестная ошибка! Введите /cancel и попробуйте снова!";
@@ -94,10 +95,17 @@ public class MainServiceImpl implements MainService {
 			return;
 		}
 
-		//TODO добавить сохранения фото :)
-		var answer = "Фото успешно загружено! "
-				+ "Ссылка для скачивания: https://test.ru/get-photo/777";
-		sendAnswer(answer, chatId);
+		try {
+			AppPhoto photo = fileService.processPhoto(update.getMessage());
+			//TODO добавить генерацию ссылки для скачивания фото
+			var answer = "Фото успешно загружено! "
+					+ "Ссылка для скачивания: https://test.ru/get-photo/777";
+			sendAnswer(answer, chatId);
+		} catch (UploadFileException ex) {
+			log.error(String.valueOf(ex));
+			String error = "К сожалению, загрузка фото не удалась. Повторите попытку позже.";
+			sendAnswer(error, chatId);
+		}
 	}
 
 	private boolean isNotAllowToSendContent(Long chatId, AppUser appUser) {
@@ -172,5 +180,4 @@ public class MainServiceImpl implements MainService {
 				.build();
 		rawDataDAO.save(rawData);
 	}
-
 }
