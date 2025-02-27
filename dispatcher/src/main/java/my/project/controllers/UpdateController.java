@@ -16,9 +16,9 @@ public class UpdateController {
 
 	private TelegramBot telegramBot;
 
-	private MessageUtils messageUtils;
+	private final MessageUtils messageUtils;
 
-	private UpdateProducer updateProducer;
+	private final UpdateProducer updateProducer;
 
 	public UpdateController(MessageUtils messageUtils, UpdateProducer updateProducer) {
 		this.messageUtils = messageUtils;

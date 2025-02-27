@@ -3,10 +3,8 @@ package my.project.entity;
 import lombok.*;
 import my.project.entity.enums.UserState;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Getter
