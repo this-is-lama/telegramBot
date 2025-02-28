@@ -11,3 +11,32 @@
 2025-02-28 14:21:44.668  INFO 10136 --- [main] my.project.DispatcherApplication         : Started DispatcherApplication in 4.714 seconds (JVM running for 9.434)
 2025-02-28 14:24:53.171  INFO 10136 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
 2025-02-28 14:24:53.454  INFO 10136 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-02-28 21:52:34.184  INFO 55224 --- [main] my.project.DispatcherApplication         : Starting DispatcherApplication using Java 11.0.26 on compucter with PID 55224 (C:\Users\islam\IdeaProjects\TGBOT\dispatcher\target\classes started by islam in C:\Users\islam\IdeaProjects\TGBOT)
+2025-02-28 21:52:34.193  INFO 55224 --- [main] my.project.DispatcherApplication         : No active profile set, falling back to default profiles: default
+2025-02-28 21:52:36.934  INFO 55224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1405 (http)
+2025-02-28 21:52:36.959  INFO 55224 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-28 21:52:36.967  INFO 55224 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2025-02-28 21:52:37.191  INFO 55224 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-28 21:52:37.191  INFO 55224 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2858 ms
+2025-02-28 21:52:48.359  INFO 55224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1405 (http) with context path ''
+2025-02-28 21:52:48.366  INFO 55224 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-02-28 21:52:48.710  INFO 55224 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#862f408:0/SimpleConnection@bbb6f0 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 58378]
+2025-02-28 21:52:48.870  INFO 55224 --- [main] my.project.DispatcherApplication         : Started DispatcherApplication in 15.986 seconds (JVM running for 17.499)
+2025-02-28 21:57:34.025  WARN 55224 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=56027] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at jdk.management.agent/sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:394) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:366) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2025-02-28 21:57:34.418  WARN 55224 --- [RMI TCP Accept-0] sun.rmi.transport.tcp                    : RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=56027] throws
+
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at jdk.management.agent/sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:394) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:366) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2025-02-28 22:02:47.366  INFO 55224 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-02-28 22:02:48.117  INFO 55224 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.

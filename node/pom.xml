@@ -68,6 +68,12 @@
             <artifactId>hibernate-types-52</artifactId>
             <version>2.2.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>jakarta.mail</groupId>
+            <artifactId>jakarta.mail-api</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

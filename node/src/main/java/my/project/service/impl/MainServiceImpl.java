@@ -9,6 +9,7 @@ import my.project.entity.AppUser;
 import my.project.entity.RawData;
 import my.project.entity.AppDocument;
 import my.project.exceptions.UploadFileException;
+import my.project.service.AppUserService;
 import my.project.service.FileService;
 import my.project.service.MainService;
 import my.project.service.ProducerService;
@@ -27,19 +28,23 @@ import static my.project.service.enums.ServiceCommands.*;
 @Slf4j
 @Service
 public class MainServiceImpl implements MainService {
+
 	private final RawDataDAO rawDataDAO;
 	private final ProducerService producerService;
 	private final AppUserDAO appUserDAO;
 	private final FileService fileService;
+	private final AppUserService appUserService;
+
 
 	public MainServiceImpl(RawDataDAO rawDataDAO,
 						   ProducerService producerService,
 						   AppUserDAO appUserDAO,
-						   FileService fileService) {
+						   FileService fileService, AppUserService appUserService) {
 		this.rawDataDAO = rawDataDAO;
 		this.producerService = producerService;
 		this.appUserDAO = appUserDAO;
 		this.fileService = fileService;
+		this.appUserService = appUserService;
 	}
 
 	@Override
@@ -56,7 +61,7 @@ public class MainServiceImpl implements MainService {
 		} else if (BASIC_STATE.equals(userState)) {
 			output = processServiceCommand(appUser, text);
 		} else if (WAIT_FOR_EMAIL_STATE.equals(userState)) {
-			//TODO добавить обработку емейла
+			output = appUserService.setEmail(appUser, text);
 		} else {
 			log.error("Unknown user state: {}", userState);
 			output = "Неизвестная ошибка! Введите /cancel и попробуйте снова!";
@@ -135,8 +140,7 @@ public class MainServiceImpl implements MainService {
 	private String processServiceCommand(AppUser appUser, String cmd) {
 		var serviceCommand = ServiceCommands.fromValue(cmd);
 		if (REGISTRATION.equals(serviceCommand)) {
-			//TODO добавить регистрацию
-			return "Временно недоступно.";
+			return appUserService.registerUser(appUser);
 		} else if (HELP.equals(serviceCommand)) {
 			return help();
 		} else if (START.equals(serviceCommand)) {
@@ -160,20 +164,19 @@ public class MainServiceImpl implements MainService {
 
 	private AppUser findOrSaveAppUser(Update update) {
 		User telegramUser = update.getMessage().getFrom();
-		AppUser persistentAppUser = appUserDAO.findAppUserByTelegramUserId(telegramUser.getId());
-		if (persistentAppUser == null) {
+		var optional = appUserDAO.findByTelegramUserId(telegramUser.getId());
+		if (optional.isEmpty()) {
 			AppUser transientAppUser = AppUser.builder()
 					.telegramUserId(telegramUser.getId())
 					.username(telegramUser.getUserName())
 					.firstName(telegramUser.getFirstName())
 					.lastName(telegramUser.getLastName())
-					//TODO изменить значение по умолчанию после добавления регистрации
-					.isActive(true)
+					.isActive(false)
 					.state(BASIC_STATE)
 					.build();
 			return appUserDAO.save(transientAppUser);
 		}
-		return persistentAppUser;
+		return optional.get();
 	}
 
 	private void saveRawData(Update update) {
