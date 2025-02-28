@@ -1,4 +1,4 @@
-package my.project;
+package my.project.utils;
 
 import org.hashids.Hashids;
 
